@@ -1,0 +1,41 @@
+h3 {
+    text-align: center;
+}
+
+body {
+    background-color: rgb(255, 147, 210);
+}
+p {
+    margin: 0 30%;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    margin-top: 10px;
+    width: 120px;
+    border: none;
+    background-color: rgb(255, 0, 119);
+    color: #fff;
+    cursor: pointer;
+    padding: 8px;
+}
+
+#resposta > p {
+    margin-left: 49%;
+}
+
+#formula > p {
+    margin-left: 46%;
+}
+
+#delta {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}

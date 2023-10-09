@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Baskara</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <form action="index.html">
+        <div>
+            <label for="valor_a">Valor de <strong>a</strong></label>
+        </div>
+        <div>
+            <input type="number" name="campo_a" id="valor_a" required>
+        </div>
+        <div>
+            <label for="valor_b">Valor de <strong>b</strong></label>
+        </div>
+        <div>
+            <input type="number" name="campo_b" id="valor_b" required>
+        </div>
+        <div>
+            <label for="valor_c">Valor de <strong>c</strong> </label>
+        </div>
+        <div>
+            <input type="number" name="campo_c" id="valor_c" required>
+        </div>
+        <div>
+            <button type="button" id="btnCalcular" name="botao_calcular">Calcular</button>
+        </div>
+    </form>
+
+    <div id="resposta"></div>
+    <div id="formula"></div>
+    </div>
+
+    <script>
+        function calcular() {
+            let valorA = Number(document.getElementById("valor_a").value);
+            let valorB = Number(document.getElementById("valor_b").value);
+            let valorC = Number(document.getElementById("valor_c").value);
+
+            let delta = (valorB ** 2) - 4 * valorA * valorC;
+
+            let x1 = (-1 * (valorB) + Math.sqrt(delta)) / (2 * valorA);
+            let x2 = (-1 * (valorB) - Math.sqrt(delta)) / (2 * valorA);
+
+            document.getElementById("resposta").innerHTML = `<h3>Valores:</h3> <p>X': <strong> ${x1} </strong> </p> <p>X'': ${x2} </p>`;
+            document.getElementById("formula").innerHTML = `<p id="delta">Delta: ${valorB}² - 4.${valorA}.${valorC}</p> <p>Bhaskara: -(${valorB}) ± √${delta} / 2.${valorA}</p>`;
+        }
+
+        document.getElementById("btnCalcular").addEventListener("click", calcular);
+    </script>
+</body>
+
+</html>
